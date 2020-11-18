@@ -14,17 +14,13 @@ String email = request.getParameter("email");
 Connection conn = null;
 PreparedStatement pstmt = null;
 ResultSet rs = null;
-
-
 String driver = "oracle.jdbc.driver.OracleDriver";
 String url = "jdbc:oracle:thin:@localhost:1522:orcl";
-
 try {
 	Context init = new InitialContext();
 	DataSource ds = (DataSource) init.lookup("java:comp/env/jdbc/OracleDB");
 	conn = ds.getConnection();
 	pstmt = conn.prepareStatement("insert into member values (?,?,?,?,?,?)");
-
 	pstmt.setString(1, id);
 	pstmt.setString(2, pass);
 	pstmt.setString(3, name);
@@ -42,7 +38,6 @@ try {
 		out.println("location.href='joinForm.jsp'");
 		out.println("</script>");
 	}
-
 } catch (Exception e) {
 	e.printStackTrace();
 }
