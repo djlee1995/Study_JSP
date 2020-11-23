@@ -6,7 +6,7 @@
  password="123456"
  driverClassName="oracle.jdbc.driver.OracleDriver"
  
- url="jdbc:oracle:thin:@127.0.0.1:1522:orcl"
+ url="jdbc:oracle:thin:@127.0.0.1:1521:orcl"
  maxActive="500"
  maxIdle="100"/>
 </Context>
